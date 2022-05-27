@@ -11,6 +11,8 @@ import {
   MinTitle,
   MinPara,
 } from "./styles";
+import {ButtonWrapper} from "../RightContentBlock/styles";
+import {Button} from "../../../common/Button";
 
 const LeftContentBlock = ({
   icon,
@@ -19,7 +21,19 @@ const LeftContentBlock = ({
   section,
   t,
   id,
+                            button
 }: ContentBlockProps) => {
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id) as HTMLDivElement;
+    element.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
+  const url = 'https://wa.me/573102707593';
+  let message='Hola necesito ayuda.'
+  let urlFinal =url+`?text=${encodeURI(message)}`;
+
   return (
     <LeftContentSection>
       <Fade direction="left">
@@ -45,6 +59,25 @@ const LeftContentBlock = ({
                     })}
                 </Row>
               </ServiceWrapper>
+              <ButtonWrapper>
+                {typeof button === "object" &&
+                    button.map((item: any, id: number) => {
+                      return (
+                          <Button
+                              key={id}
+                              color={item.color}
+                              fixedWidth={true}
+                              onClick={() => {
+                                window.open(urlFinal,'_blank')
+                              }
+
+                              }
+                          >
+                            {t(item.title)}  <img src="/img/icons/whatsapp-logo.png" width="30px" height="30px" />
+                          </Button>
+                      );
+                    })}
+              </ButtonWrapper>
             </ContentWrapper>
           </Col>
         </Row>

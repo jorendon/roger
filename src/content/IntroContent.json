@@ -1,12 +1,9 @@
 {
-  "title": "Landing page template for developers & startups",
-  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+"title": "Amarres de Amor",
+  "text": "A veces un error puede transformar tu vida en un abismo y tu felicidad es sufrimiento te despiertas todas las maneras arrepintiéndote de esta equivocación y que ese día nunca hubiera sucedido Pues no sé se convierten en pesadilla y te desvelas pensando que tu ser amado se ha alejado y nunca más regresará volverá a ser el mismo este poderoso ritual revive la llama del amor y crea lazos tan fuertes que tu pareja regrese rendida a tus pies totalmente enamorada y arrepentida",
   "button": [
     {
-      "title": "Explore"
-    },
-    {
-      "title": "Learn more",
+      "title": "Explore",
       "color": "#fff"
     }
   ]

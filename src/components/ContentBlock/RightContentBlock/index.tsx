@@ -25,6 +25,12 @@ const RightBlock = ({
       behavior: "smooth",
     });
   };
+
+  const url = 'https://wa.me/573102707593';
+  let message='Hola necesito ayuda.'
+  let urlFinal =url+`?text=${encodeURI(message)}`;
+
+
   return (
     <RightBlockContainer>
       <Fade direction="right">
@@ -41,9 +47,13 @@ const RightBlock = ({
                         key={id}
                         color={item.color}
                         fixedWidth={true}
-                        onClick={() => scrollTo("about")}
+                        onClick={() => {
+                          window.open(urlFinal,'_blank')
+                        }
+
+                      }
                       >
-                        {t(item.title)}
+                        {t(item.title)}<img src="/img/icons/whatsapp-logo.png" width="30px" height="30px" />
                       </Button>
                     );
                   })}
